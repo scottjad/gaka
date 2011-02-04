@@ -71,7 +71,7 @@
                (reduce (fn [rs x]
                          (compile* rs x))
                        rules subrules))))
-          rules (s/split #"\s*,\s*" (name selector))))
+          rules (s/split #"\s*;\s*" (name selector))))
 
 (defn css [& rules]
   (let [rules (filter (complement empty?) rules)]
